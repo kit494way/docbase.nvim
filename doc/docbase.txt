@@ -1,0 +1,76 @@
+*docbase.txt* Edit and display DocBase posts in neovim.
+
+==============================================================================
+Commands                                                    *docbase-commands*
+
+:DocBaseOpen {id}                                               *:DocBaseOpen*
+
+        Open the post has specified {id}.
+
+:DocBaseSave {title}                                            *:DocBaseSave*
+
+        Save current buffer contents to DocBase. {title} is optional.
+        If saving the new post, you must specify {title} on this command, or
+        by :DocBaseTitle {tite} before save.
+
+:DocBaseSearch {query}                                        *:DocBaseSearch*
+
+        Search post by query. Query format is same as DocBase web service.
+        {query} is optional, and space separeted words.
+
+:DocBaseSearchNext                                        *:DocBaseSearchNext*
+
+        Show the next page of the previous :DocBaseSearch result.
+
+:DocBaseSearchPrev                                        *:DocBaseSearchPrev*
+
+        Show the previous page of the previous :DocBaseSearch result.
+
+:DocBaseSearchResult                                    *:DocBaseSearchResult*
+
+        Show the previous :DocBaseSearch result.
+
+:DocBaseOpenResult                                        *:DocBaseOpenResult*
+
+        In :DocBaseSearchResult view, oepn the post under the current line.
+
+:DocBaseTitle {title}                                          *:DocBaseTitle*
+
+        Set the title of current buffer's docbase post.
+
+:DocBaseAddTags {tags}                                       *:DocBaseAddTags*
+
+        Add the {tags} to current buffer's docbase post.
+        {tags} is space sparated words.
+
+:DocBaseRemoveTags                                        *:DocBaseRemoveTags*
+
+        Remove the {tags} to current buffer's docbase post.
+        {tags} is space sparated words.
+
+:DocBaseDraftEnable                                      *:DocBaseDraftEnable*
+
+        Make the current buffer's post as draft.
+
+:DocBaseDraftDisable                                    *:DocBaseDraftDisable*
+
+        Make the current buffer's post as not draft.
+
+:DocBaseScope  {scope} {groups}                                *:DocBaseScope*
+
+        Set the {scope} to the current buffer's post. Scope must be one of
+        follwoing, 'everyone', 'group', 'private'.
+        {groups} is available when {scope} is 'group'.
+
+:DocBaseNoticeEnable                                    *:DocBaseNoticeEnable*
+
+        Make notification of the current buffer's post enable.
+
+:DocBaseNoticeDisable                                  *:DocBaseNoticeDisable*
+
+        Make notification of the current buffer's post disable.
+
+:DocBaseInfo                                                    *:DocBaseInfo*
+
+        Show information about current buffer's docbase post. This shows,
+        title, author, tags, scope, groups, comments etc.
